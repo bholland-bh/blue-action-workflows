@@ -8,9 +8,9 @@ on:
       slack_channel_id:
         default: C02HLKYAU56 # blue-devs
         type: string
-#    secrets:
-#      SLACK_NOTIFICATIONS_BOT_TOKEN:
-#        required: true
+   secrets:
+     SLACK_NOTIFICATIONS_BOT_TOKEN:
+       required: true
 
 # only populated on pull_request events
 #  SOURCE_BRANCH: ${{ github.head_ref }} 
@@ -18,7 +18,7 @@ on:
 
 jobs:
    target-branch-sync:
-    if: github.event.pull_request.merged == true && github.base_ref == 'main'
+    if: github.event.pull_request.merged == true && github.base_ref == 'develop'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
