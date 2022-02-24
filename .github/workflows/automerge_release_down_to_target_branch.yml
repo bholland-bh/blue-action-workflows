@@ -3,7 +3,7 @@ on:
   workflow_call:
     inputs:
       target_branch:
-        required: true
+        default: develop
         type: string
       slack_channel_id:
         default: C02HLKYAU56 # blue-devs
