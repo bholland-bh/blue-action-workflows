@@ -42,5 +42,5 @@ jobs:
         uses: voxmedia/github-action-slack-notify-build@v1
         with:
           channel_id: C02HLKYAU56 # blue-devs
-          status: ${{ env.MERGE_FAILURE }}
+          status: FAILED merge to ${{ env.MERGE_FAILURE }}
           color: danger
