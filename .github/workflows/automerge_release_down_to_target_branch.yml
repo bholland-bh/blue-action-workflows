@@ -28,7 +28,7 @@ jobs:
         uses: voxmedia/github-action-slack-notify-build@v1
         with:
           channel_id: ${{ inputs.slack_channel_id }}
-          status: Merging to develop
+          status: Merging to ${{ inputs.target_branch }}
           color: warning
       
       - uses: actions/checkout@master
