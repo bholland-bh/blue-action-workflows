@@ -18,14 +18,14 @@ on:
 
 jobs:
    automerge-to-target-branch:
-    if: false
-#     if: >
-#           github.event.pull_request.merged == true &&
-#           startsWith(github.base_ref, 'release/') &&
-#           !(
-#             contains(github.event.pull_request.labels.*.name, 'no-actions') ||
-#             contains(github.event.pull_request.labels.*.name, 'no-automerge')
-#           )
+    if: >
+          false &&
+          github.event.pull_request.merged == true &&
+          startsWith(github.base_ref, 'release/') &&
+          !(
+            contains(github.event.pull_request.labels.*.name, 'no-actions') ||
+            contains(github.event.pull_request.labels.*.name, 'no-automerge')
+          )
     runs-on: ubuntu-latest
     steps:
       - name: Notify slack started
